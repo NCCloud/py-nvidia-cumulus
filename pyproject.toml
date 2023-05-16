@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "py-nvidia-cumulus"
-version = "0.0.3"
+version = "0.0.4"
 description = "Python API Client for Nvidia Cumulus"
 authors = ["Namecheap Cloud <cloud@namecheap.com>"]
 license = "Apache-2.0"
