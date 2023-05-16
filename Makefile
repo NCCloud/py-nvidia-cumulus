@@ -20,7 +20,7 @@ build: ## package the module
 	@poetry build
 
 .PHONY: publish
-upload: ## upload the package to PyPi
+publish: ## upload the package to PyPi
 	@poetry publish
 
 .PHONY: all
