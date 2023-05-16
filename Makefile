@@ -19,9 +19,9 @@ lint: ## run flake8 linter
 build: ## package the module
 	@poetry build
 
-.PHONY: upload
+.PHONY: publish
 upload: ## upload the package to PyPi
 	@poetry publish
 
 .PHONY: all
-all: lint test build upload ## lint, test, build, and upload the package to PyPI
+all: lint test build publish ## lint, test, build, and upload the package to PyPI
