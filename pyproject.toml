@@ -3,11 +3,10 @@ name = "py-nvidia-cumulus"
 version = "0.0.3"
 description = "Python API Client for Nvidia Cumulus"
 authors = ["Namecheap Cloud <cloud@namecheap.com>"]
-license = "MIT"
+license = "Apache-2.0"
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 packages = [{include = "cumulus"}]
