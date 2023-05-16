@@ -103,6 +103,6 @@ To see the available versions, check the [PyPI page](https://pypi.org/project/py
 ## 🤝 Contribution
 
 We welcome contributions, issues, and feature requests!
-Also, please refer to our contribution guidelines for details.
+Also, please refer to our [contribution guidelines](https://github.com/NCCloud/py-nvidia-cumulus/blob/main/.github/CONTRIBUTING.md) for details.
 
 Made with <span style="color: #e25555;">&hearts;</span> by [Namecheap Cloud Team](https://github.com/NCCloud)

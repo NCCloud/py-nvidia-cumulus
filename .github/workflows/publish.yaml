@@ -1,0 +1,40 @@
+name: Upload The Package to PyPI
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+    paths:
+      - "pyproject.toml"
+
+jobs:
+  pypi-publish:
+    if: |
+      ${{ github.event.pull_request.merged == true }}
+      && ${{ contains(github.event.pull_request.labels.*.name, 'release') }}
+
+    runs-on: ubuntu-latest
+    env:
+      POETRY_PYPI_TOKEN_PYPI: ${{secrets.PYPI_NAMECHEAPCLOUD_PY_NVIDIA_CUMULUS_TOKEN}}
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v2
+        with:
+          poetry-version: "1.4.2"
+
+      - name: Init Poetry
+        run: make init
+
+      - name: Build package
+        run: make build
+
+      - name: Publish the package to PyPI
+        run: make publish
